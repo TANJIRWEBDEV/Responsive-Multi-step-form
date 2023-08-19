@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: https://github.com/TANJIRWEBDEV/Responsive_news_homepage
+- Solution URL: [https://github.com/TANJIRWEBDEV/Responsive_news_homepage](https://github.com/TANJIRWEBDEV/Responsive-Multi-step-form)
 - Live Site URL: https://coruscating-mermaid-b549c4.netlify.app/
 
 ## My process
