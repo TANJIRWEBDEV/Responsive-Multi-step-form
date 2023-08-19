@@ -1,0 +1,369 @@
+.formsteps {
+  display: none;
+}
+.activeF {
+  display: block;
+
+  animation-name: slide;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+@keyframes slide {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.formsteps :is(h1) {
+  font-size: 1.6rem;
+  color: hsl(213, 96%, 18%);
+  padding-bottom: 8px;
+}
+
+.formsteps > p {
+  color: hsl(231, 11%, 63%);
+  padding-bottom: min(30px, 5.5vw);
+  font-size: 0.9rem;
+}
+
+/* ..............from step 1............................. */
+.formstep1__items_3-1 {
+  padding-bottom: 5%;
+
+  font-size: 0.8rem;
+}
+
+.formstep1__items_3-1 > div {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: min(10px, 1%);
+}
+
+.formstep1__items_3-1:is(div) label {
+  color: hsl(213, 96%, 18%);
+}
+
+.formstep1__items_3-1 :is(div) p {
+  color: hsl(354, 84%, 57%);
+  font-weight: 500;
+}
+
+.formstep1__items_3-1 > input {
+  width: 100%;
+  border: 1px solid #cccccc;
+  padding: 0.55rem 0.95rem;
+  border-radius: 5px;
+  cursor: pointer;
+  color: hsl(213, 96%, 18%);
+  font-weight: 600;
+}
+.formstep1__items_3-1 > :focus {
+  border-style: double;
+  border-color: hsl(243, 100%, 62%);
+}
+
+.formstep1__items_3-1 .ierror {
+  border: 1px solid hsl(354, 84%, 57%);
+  animation-name: bounce;
+  animation-duration: 0.2s;
+}
+@keyframes bounce {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(-10px);
+  }
+
+  100% {
+    transform: translateX(10px);
+  }
+}
+
+input::placeholder {
+  color: hsl(231, 11%, 63%);
+  font-weight: 700;
+}
+
+/* ..............from step 2............................. */
+.formstep2__items_3 {
+  padding-bottom: 0.6rem;
+}
+
+.formstep2__items_3_1 {
+  border: 1px solid #cccccc;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  padding: 0.9rem;
+  cursor: pointer;
+}
+
+.formstep2__items_3_1 :is(h3) {
+  color: hsl(213, 96%, 18%);
+  font-size: 1rem;
+}
+
+.formstep2__items_3_1 :is(p) {
+  color: hsl(231, 11%, 63%);
+  font-size: 0.9rem;
+}
+
+.formstep2__items_3_1 :is(h6) {
+  color: hsl(213, 96%, 18%);
+  padding-top: 2px;
+}
+.formstep2__items_3_1:hover {
+  border-color: hsl(243, 100%, 62%);
+}
+.seActice {
+  background-color: hsl(217, 100%, 97%);
+  border-color: hsl(243, 100%, 62%);
+}
+
+.formstep2__items_4 {
+  display: flex;
+  padding: 3%;
+  border-radius: 11px;
+  margin-bottom: 4%;
+  justify-content: center;
+  align-items: center;
+  gap: 6%;
+  background-color: hsl(217, 100%, 97%);
+}
+
+.formstep2__items_4-1 {
+  color: hsl(213, 96%, 18%);
+  font-weight: 500;
+  transition: all 1s;
+}
+.mActive {
+  color: hsl(231, 11%, 63%);
+}
+.formstep2__items_4-2 {
+  height: 21px;
+  width: 45px;
+  border-radius: 20px;
+  background-color: hsl(213, 96%, 18%);
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+  transition: all 1s;
+}
+
+.myS {
+  padding-left: 24px;
+}
+
+.formstep2__items_4-2::before {
+  content: "";
+
+  padding: 6.5px;
+  margin-right: 4px;
+  margin-left: 4px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+/* ..............from step 3............................. */
+.formstep3__items_3_1 {
+  border: 1px solid #cccccc;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  padding: 0.9rem 1rem;
+  cursor: pointer;
+  transition: all 300ms;
+  display: flex;
+  align-items: center;
+}
+.seActices {
+  background-color: hsl(217, 100%, 97%);
+  border-color: hsl(243, 100%, 62%);
+}
+.formstep3__items_3_1:hover {
+  border-color: hsl(243, 100%, 62%);
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  background-color: #fff;
+  margin: 0;
+  font: inherit;
+  color: white;
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  display: grid;
+  place-content: center;
+  transition: 300ms all ease-in-out;
+  margin-right: min(3vw, 20px);
+}
+
+input[type="checkbox"]::before {
+  content: url("./assets/icon-checkmark.svg");
+
+  transform: scale(0);
+
+  transition: 300ms all ease-in-out;
+}
+
+input[type="checkbox"]:checked {
+  background-color: blue;
+  border: none;
+}
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+  transform: translateY(-0.085em);
+}
+input[type="checkbox"]:hover {
+  transform: scale(1.1);
+}
+input[type="checkbox"]:focus {
+  transform: scale(1.1);
+}
+
+.formstep3__items_3_1 :is(div) h4 {
+  color: hsl(213, 96%, 18%);
+  font-size: min(4.1vw, 1rem);
+}
+
+.formstep3__items_3_1 :is(div) p {
+  color: hsl(231, 11%, 63%);
+  font-size: min(3.4vw, 0.9rem);
+  line-height: 1.3;
+}
+
+.formstep3__items_3_1 > p {
+  margin-left: auto;
+  color: hsl(243, 100%, 62%);
+
+  font-size: 0.8rem;
+}
+
+/* ..............from step 4............................. */
+.formstep4__items_3 {
+  padding: 1rem 1rem 0.6rem 1rem;
+  background-color: hsl(217, 100%, 97%);
+  border-radius: 10px;
+}
+
+.formstep4__items_3_1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.formstep4__items_3_1 :is(h4) {
+  color: hsl(213, 96%, 18%);
+  font-size: min(4vw, 1rem);
+}
+
+.formstep4__items_3_1 :is(div) p {
+  color: hsl(231, 11%, 63%);
+  line-height: 1.1;
+  font-weight: 600;
+  font-size: min(4vw, 1rem);
+  text-decoration: underline;
+  cursor: pointer;
+  width: min-content;
+}
+.formstep4__items_3_1 :is(div) p:hover {
+  color: hsl(243, 100%, 62%);
+}
+
+.formstep4__items_3_1 > p {
+  color: hsl(213, 96%, 18%);
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #cccccc;
+  margin-top: 1.1rem;
+  padding-bottom: 1rem;
+}
+
+.formstep4__items_3_2 {
+  display: flex;
+  padding-bottom: 0.6rem;
+
+  justify-content: space-between;
+}
+
+.formstep4__items_3_2 > p:first-child {
+  font-size: min(4vw, 1rem);
+  color: hsl(231, 11%, 63%);
+}
+
+.formstep4__items_3_2 > p:last-child {
+  color: hsl(213, 96%, 18%);
+  font-size: min(4vw, 1rem);
+}
+
+.formstep4__items_4 {
+  padding: 1.5rem 1rem 0.6rem 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+.formstep4__items_4 > p:first-child {
+  font-size: min(4vw, 1rem);
+  color: hsl(231, 11%, 63%);
+}
+
+.formstep4__items_4 > p:last-child {
+  color: hsl(243, 100%, 62%);
+  font-size: min(4vw, 1rem);
+  font-weight: 600;
+}
+/* ..............finish step............................. */
+.formstep5__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  padding-top: 25%;
+  padding-bottom: 15%;
+}
+.formstep5__container :is(img) {
+  width: min(16vw, 80px);
+}
+.formstep5__container > div {
+  padding-bottom: 1.5rem;
+}
+.formstep5__container > p {
+  color: hsl(231, 11%, 63%);
+  padding-bottom: 1.1rem;
+}
+
+@media (min-width: 850px) {
+  .activeF {
+    padding-top: 7%;
+  }
+  .formsteps :is(h1) {
+    padding-bottom: 6px;
+  }
+  .formstep2__items_3 {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(105px, auto));
+    gap: 12px;
+  }
+  .formstep2__items_3_1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 45px;
+  }
+  .formstep2__items_4 {
+    margin: 0;
+  }
+}
